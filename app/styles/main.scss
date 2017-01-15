@@ -1,93 +1,192 @@
 $icon-font-path: '../fonts/';
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+//@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+$black: #000000;
+$white: #ffffff;
+$highlight: #0ce8fc;
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+@-webkit-keyframes glow {
+  to {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05) inset, 0px 0px 20px $highlight;
+  }
 }
 
-/* Space out content a bit */
+html {
+  font-size: 62.5%;
+}
+
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-family: "Avenir Next" !important;
+  font-size: 1.6rem;
+  letter-spacing: .3rem;
+  background-color: $white;
+  color: $black;
+  font-weight: 300;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+  color: $white;
+  &:hover {
+    color: $black;
+  }
+  &:visited {
+    color: $black;
+  }
+  &:active {
+    color: $black;
+  }
+  &:focus {
+    color: $black;
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+hr {
+  width: 98%;
+  border: .5px solid $black;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+button.omara {
+  border-radius: 50%;
+  background: #ffffff;
+  background-image: radial-gradient(50% 50%, #A59797 30%, #FFFFFF 100%);
+  border: 1px solid $white;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+.white-text {
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+  &:visited {
+    color: $white;
+  }
+  &:active {
+    color: $white;
+  }
+  &:focus {
+    color: $white;
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
+.space-background {
+  background-color: #000000;
+}
+
+.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.globe-black {
+  border-radius: 50%;
+  background: url("../images/img-noise-800x800.png");
+  background-size: contain;
+  animation: glow 3s infinite alternate;
+  transition: all 0.5s;
+  //animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.globe-gradient {
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.45) 54%, rgba(0,0,0,0.45) 100%);
+  opacity: .4;
+  z-index: 1;
+}
+
+.home {
+  button.omara {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-right: -.7rem;
+    margin-left: .5rem;
+  }
+  .content-wrapper {
+    z-index: 2;
+  }
+  .globe {
+    height: 288px;
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .group {
+    width: 100%;
+    text-align: center;
+    .title-name {
+      letter-spacing: .4rem;
+      font-size: 2.5rem;
+    }
+    .title-job {
+      font-size: 1.55rem;
+    }
+  }
+  .menu-link {
+    font-size: 2.4rem;
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 98vh;
+  #menu-about-link {
+    font-size: 3rem;
+    letter-spacing: .8rem;
   }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  button.omara {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: -.5rem;
+    margin-left: .2rem;
+    padding-bottom: .2rem;
+  }
+  .globe {
+    height: 388px;
+    width: 388px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content-wrapper {
+    z-index: 1;
+    width: 288px;
+    height: 345px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .about-pic {
+      width: 135px;
+      margin-bottom: 2rem;
+    }
+    .about-text {
+      width: 99%;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  #menu-work-link {
+    font-size: 2rem;
+    letter-spacing: .6rem;
+  }
+  .contact-wrapper {
+    margin-bottom: .2rem;
+    margin-top: .5rem;
+    font-size: 2rem;
+    .fa {
+      padding: .3rem;
+    }
   }
 }
