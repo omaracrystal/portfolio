@@ -11,8 +11,8 @@ A collection of my work built with React.
 - Gulp
 - Node
 
-![alt text](app/images/porfolio-sketch-mobile-1.png)
-![alt text](app/images/porfolio-sketch-mobile-1.png)
+![alt text](app/images/portfolio-sketch-mobile-1.png)
+![alt text](app/images/portfolio-sketch-mobile-2.png)
 ![alt text](app/images/portfolio-home.png)
 ![alt text](app/images/portfolio-about.png)
 ![alt text](app/images/portfolio-content.png)
