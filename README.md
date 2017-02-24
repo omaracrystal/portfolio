@@ -8,8 +8,9 @@ A collection of my work built with React.
 - SASS
 - Javascript/ ES6
 - React.js
-- Gulp
+- Gulp / BrowserSync
 - Node
+- Sketch
 
 ![alt text](app/images/portfolio-sketch-mobile-1.png)
 ![alt text](app/images/portfolio-sketch-mobile-2.png)
